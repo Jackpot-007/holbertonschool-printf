@@ -3,8 +3,7 @@
 /**
  * print_string - imprime la cadena de caracteres
  * @str: la cadena que se debe imprimir
- * 
- * return: retorna el numero de caracteres impresos
+ * Return: retorna el numero de caracteres impresos
  */
 int print_string(char *str)
 {
@@ -12,7 +11,6 @@ int print_string(char *str)
 
 	if (str == NULL)
 		str = "(null)";
-		
 
 	while (str[i] != '\0')
 	{

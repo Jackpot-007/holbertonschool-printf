@@ -4,26 +4,26 @@
 #include "main.h"
 
 /**
- * _print_string - Imprime una cadena en la salida estánar.
- * @str: La cadena a imprimir.
- * Return: Número de caracteres impresos
+ * _printf - Imprime segun el formato que sea
+ * @format: cadena que contiene los especificadores
+ * Return: Número de caracteres impreso
  */
 int _printf(const char *format, ...)
 {
 	int count = 0;
 	va_list args;
-	
-	
+
+
 	if (*format == '\0')
 	{
 		return (-1);
 	}
-	
-	va_start (args, format);
 
-	while (*format)
+	va_start(args, format);
+
+
 	{
-		if(*format == '%') /*por si encuentra un %*/
+		if (*format == '%') /*por si encuentra un %*/
 		{
 			format++;
 			count = count + especificadores(*format, args);
