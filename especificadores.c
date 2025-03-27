@@ -14,7 +14,7 @@ int especificadores(char format, va_list args)
 
 	if (format == 'c') /* %c */
 		count = count + _putchar(va_arg(args, int));
-	
+
 	else if (format == 's')
 		count = count + print_string(va_arg(args, char *));
 

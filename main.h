@@ -8,4 +8,4 @@ int _putchar(char c);
 int especificadores(char format, va_list args);
 int print_string(char *str);
 
-#endif 
+#endif
