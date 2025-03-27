@@ -1,32 +1,39 @@
+#include <stddef.h>
 #include <stdarg.h>
 #include <unistd.h>
 #include "main.h"
 
 /**
- * _print_string - Imprime una cadena en la salida estánda.
+ * _print_string - Imprime una cadena en la salida estánar.
  * @str: La cadena a imprimir.
  * Return: Número de caracteres impresos
  */
-int _print_string(char *str)
+int _printf(const char *format, ...)
 {
 	int count = 0;
-
-	if (str == NULL)
-		str = "(null)"; /* Manejar caso NULL */
-
-	while (*str)
+	va_list args;
+	
+	
+	if (format == NULL)
 	{
-		_putchar(*str);
-		str++;
-		count++;
+		return (-1);
 	}
+	
+	va_start (args, format);
 
+	while (*format)
+	{
+		if(*format == '%') /*por si encuentra un %*/
+		{
+			format++;
+			count = count + especificadores(*format, args);
+		}
+		else /*por si es un caracter normal*/
+		{
+			count = count + _putchar(*format);
+		}
+		format++;
+	}
+	va_end(args);
 	return (count);
 }
-
-/**
- * _print_int - Imprime un número entero en la salida estánda
- * @num: El número entero a imprimir
- * Return: Número de caracteres impresos
- */
-
