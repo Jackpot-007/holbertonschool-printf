@@ -16,7 +16,7 @@ int especificadores(char format, va_list args)
 	else if (format == 's') /* %s */
 		count = count + print_string(va_arg(args, char *));
 	
-	else if (format == '%') /* % */
+	else if (format == '%') /* %% */
 		count = count + _putchar('%');
 	
 	else
