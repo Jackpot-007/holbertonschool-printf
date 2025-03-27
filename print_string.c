@@ -8,7 +8,7 @@
  */
 int print_string(char *str)
 {
-	int i;
+	int i = 0;
 
 	if (str == NULL)
 		str = "(null)";
@@ -16,7 +16,7 @@ int print_string(char *str)
 
 	while (str[i] != '\0')
 	{
-		i = i + _putchar(str[i]);
+		_putchar(str[i]);
 		i++;
 	}
 
