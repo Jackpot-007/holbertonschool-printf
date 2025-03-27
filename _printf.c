@@ -3,16 +3,6 @@
 #include "main.h"
 
 /**
- * _putchar - Escribe un solo carácter en la salida estánda
- * @c: El carácter a imprimir
- * Return: En caso de éxio 1, en caso de error -1.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
-/**
  * _print_string - Imprime una cadena en la salida estánda.
  * @str: La cadena a imprimir.
  * Return: Número de caracteres impresos
