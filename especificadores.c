@@ -13,18 +13,24 @@ int especificadores(char format, va_list args)
 	int count = 0;
 
 	if (format == 'c') /* %c */
-		count = count + _putchar(va_arg(args, int));
+	count += _putchar(va_arg(args, int));
 
 	else if (format == 's')
-		count = count + print_string(va_arg(args, char *));
+	count += print_string(va_arg(args, char *));
 
 	else if (format == '%') /* %% */
-		count = count + _putchar('%');
+	count += _putchar('%');
+
+	else if (format == 'd')
+	count += print_int(va_arg(args, int));
+
+	else if (format == 'i')
+	count += print_int(va_arg(args, int));
 
 	else
 	{
-		count = count + _putchar('%');
-		count = count + _putchar(format);
+	count += _putchar('%');
+	count += _putchar(format);
 	}
 
 	return (count);
