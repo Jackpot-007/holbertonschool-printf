@@ -26,8 +26,6 @@ int _printf(const char *format, ...)
 		if (*format == '%') /*por si encuentra un %*/
 		{
 			format++;
-			if (*format == '\0')
-				return (-1);
 			count = count + especificadores(*format, args);
 		}
 		else /*por si es un caracter normal*/
