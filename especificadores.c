@@ -12,13 +12,13 @@ int especificadores(char format, va_list args)
 {
 	int count = 0;
 
-	if (format == 'c') /* %c */
+	if (format == 'c')
 	count += _putchar(va_arg(args, int));
 
 	else if (format == 's')
 	count += print_string(va_arg(args, char *));
 
-	else if (format == '%') /* %% */
+	else if (format == '%')
 	count += _putchar('%');
 
 	else if (format == 'd')
